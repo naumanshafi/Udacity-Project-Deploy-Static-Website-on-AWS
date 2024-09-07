@@ -3,7 +3,7 @@ name: Deploy to S3 and Invalidate CloudFront Cache
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - main
 
 jobs:
   deploy:
