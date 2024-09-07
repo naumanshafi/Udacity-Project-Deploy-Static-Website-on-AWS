@@ -1,0 +1,43 @@
+# Ignore node_modules if you're using Node.js for package management (e.g., with npm)
+node_modules/
+
+# Ignore Bootstrap and jQuery source files if they're installed via package managers like npm or yarn
+vendor/
+
+# Ignore compiled CSS/JS files if they are generated from source files (e.g., SCSS, LESS)
+*.min.css
+*.min.js
+*.map
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore SFTP configuration files
+.sftp-config.json
+
+# Ignore IDE/editor configuration files
+.vscode/
+.idea/
+
+# Ignore environment variables or other sensitive configuration files
+.env
+
+# Ignore build/production directories if generated
+/dist/
+/build/
+
+# Ignore any zip files or compressed files
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore debug files or other temporary files that might be generated
+debug.log
+.history
