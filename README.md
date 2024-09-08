@@ -53,6 +53,24 @@ The goal of this project is to host a static website on AWS using the following 
 
 4.2 The website should be globally accessible with fast load times due to CloudFront's CDN capabilities.
 
+---
+
+## GitHub Workflow for Continuous Deployment (CD)
+
+This project includes a GitHub Actions workflow file that automates the deployment process to AWS. The workflow triggers upon pushes to the `main` branch, synchronizing the static website files to the S3 bucket and invalidating the CloudFront cache to ensure that the latest content is served globally.
+
+To use the workflow, ensure that you configure the required secrets (AWS credentials, S3 bucket name, and CloudFront distribution ID) in your GitHub repository.
+
+The workflow file can be found in the following path within the project:
+
+```
+.github/workflows/aws-cd.yml
+```
+
+Make sure the required AWS secrets are configured in the repository settings for proper deployment.
+
+---
+
 ## Repository Contents
 
 - **index.html**: The main HTML file.
@@ -60,12 +78,19 @@ The goal of this project is to host a static website on AWS using the following 
 - **/vendor**: Contains Bootstrap, Font Awesome, and jQuery files.
 - **/css**: Custom CSS files for styling the website.
 - **README.md**: Documentation for the project.
+- **.github/workflows/aws-cd.yml**: GitHub Actions workflow file for automating deployment.
 
 ## Accessing the Website
 
 Once deployed, the website can be accessed via the CloudFront domain name provided by AWS. If a custom domain is used, ensure that DNS records are correctly set up to point to the CloudFront distribution.
 
+## Preview
+
+<img width="1440" alt="Screenshot 2024-09-07 at 8 59 38 PM" src="https://github.com/user-attachments/assets/6c7afd44-b6c8-451f-bcde-a0d56fea5412">
+<img width="1190" alt="Screenshot 2024-09-07 at 9 36 58 PM" src="https://github.com/user-attachments/assets/ce7f8536-266b-40b2-93c3-a4ec36fd9433">
+<img width="1175" alt="Screenshot 2024-09-07 at 9 38 37 PM" src="https://github.com/user-attachments/assets/d9706933-cc07-49f4-8fec-277634821cba">
+
+
 ## Conclusion
 
 This project demonstrates how to efficiently deploy and distribute a static website using AWS services. By leveraging S3 for storage, CloudFront for global content distribution, and IAM for secure access management, the website is both scalable and secure.
-
